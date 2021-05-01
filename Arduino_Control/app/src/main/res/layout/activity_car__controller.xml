@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Car_Controller">
+
+    <ImageView
+        android:id="@+id/i_v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            style="@style/Base.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gear_1"
+            android:text="1"
+            android:textSize="30sp"
+            android:background="@drawable/shape"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            style="@style/Base.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gear_2"
+            android:text="2"
+            android:textSize="30sp"
+            android:background="@drawable/shape"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            style="@style/Base.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gear_3"
+            android:text="3"
+            android:textSize="30sp"
+            android:background="@drawable/shape"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            style="@style/Base.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gear_4"
+            android:text="4"
+            android:textSize="30sp"
+            android:background="@drawable/shape"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            style="@style/Base.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gear_5"
+            android:text="5"
+            android:textSize="30sp"
+            android:background="@drawable/shape"
+            android:textColor="@android:color/white"/>
+
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="false"
+        android:layout_marginBottom="40dp"
+        app:lottie_rawRes="@raw/meter"
+        android:id="@+id/lottie"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp">
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:drawableStart="@drawable/ic_baseline_wb_incandescent_24"
+            android:drawablePadding="10dp"
+            android:textSize="18sp"
+            style="@style/Base.CardView"
+            android:switchPadding="20dp"
+            android:id="@+id/f_led"
+            />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:drawableStart="@drawable/park_24"
+            android:drawablePadding="10dp"
+            android:textSize="20sp"
+            style="@style/Base.CardView"
+            android:switchPadding="10dp"
+            android:id="@+id/b_led"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_centerVertical="true">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:background="@drawable/greyleft"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="70dp"
+            android:id="@+id/left"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/left" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:background="@drawable/greyleft"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/left"
+            android:scaleX="-1"
+            android:id="@+id/right"
+            android:contentDescription="@string/right" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="70dp"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        >
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="120dp"
+            android:id="@+id/backward"
+            style="@style/Base.CardView"
+            android:background="@drawable/br"
+            android:contentDescription="@string/brake"
+            android:layout_marginEnd="15dp"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="135dp"
+            android:id="@+id/forward"
+            android:background="@drawable/acc"
+            style="@style/Base.CardView"
+            android:contentDescription="@string/accelerate" />
+    </LinearLayout>
+</RelativeLayout>

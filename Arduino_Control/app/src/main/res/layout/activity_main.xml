@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lv"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connection Status : " />
+
+        <TextView
+            android:id="@+id/te"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Connected"
+            android:layout_toEndOf="@+id/tev"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Move Test"
+            android:background="@android:color/transparent"
+            android:id="@+id/mv"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:layout_below="@+id/lv"
+        android:id="@+id/on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn On" />
+
+    <Button
+        android:id="@+id/off"
+        android:layout_toEndOf="@+id/on"
+        android:layout_below="@+id/lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn Off" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:id="@+id/lv2"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/on">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Available Devices:"
+            android:textColor="#000000" />
+
+        <ListView
+            android:id="@+id/devicesList"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="5dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/drive"
+        android:layout_below="@id/lv2"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"
+        android:text="Ready To Race >>>"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click above to Drive"
+        android:textColor="@android:color/darker_gray"
+        android:layout_below="@+id/drive"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        />
+
+</RelativeLayout>
